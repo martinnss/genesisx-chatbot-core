@@ -95,15 +95,58 @@ Descripción de las tablas:
 
 
 
-## 🚀 Uso
-1. Levantar servidor:
-   ```bash
-    python -m http.server 8000
-    flask run --port=5000
-   ```
-2. Abrir `http://localhost:8000` en el navegador.
-3. Seleccionar usuario o ingresar un `user_id`.
-4. Iniciar chat y ver historial en la sección "Historial".
+## 🚀 Instrucciones para levantar el servidor
+
+Este proyecto requiere **dos ventanas de terminal** funcionando simultáneamente: una para el frontend y otra para el backend. A continuación se detallan los pasos para cada una.
+
+### 🖥️ Terminal 1: Frontend
+
+1. Abrir una nueva terminal.
+2. Posicionarse en el directorio del frontend:
+
+   ``` cd frontend  ```
+
+3. Iniciar el servidor local para el frontend:
+
+   ``` python -m http.server 8000  ```
+
+   Esto levantará el frontend en http://localhost:8000
+
+
+### 🛠️ Terminal 2: Backend
+
+1. Abrir otra terminal en paralelo.
+2. Asegurarse de estar en la raíz del proyecto
+3. Activar el entorno virtual (venv):
+
+   - En Windows:
+
+    ``` .\venv\Scripts\activate  ```
+
+   - En Linux/Mac:
+
+    ``` source venv/bin/activate  ```
+
+4. Exportar variables de entorno y levantar el servidor de Flask:
+
+   En Linux/Mac:
+    ```bash
+     export FLASK_APP=backend/main.py
+     export FLASK_ENV=development
+     flask run --port=5000
+    ```
+
+   En Windows (cmd/powershell):
+    ```bash
+     set FLASK_APP=backend/main.py
+     set FLASK_ENV=development
+     flask run --port=5000
+     ```
+
+---
+
+Una vez hecho esto, el servidor estará listo. El frontend corre en el puerto 8000 y el backend en el 5000.
+
 
 
 
