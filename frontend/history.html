@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Historial GenesisX</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-xl mx-auto bg-white p-4 rounded shadow">
+    <span class="bg-gradient-to-br from-[#763DF2] to-[#27DEF2] bg-clip-text text-transparent text-3xl font-bold block text-center">
+      GenesisX
+    </span>
+    <label class="block mb-2 font-medium text-gray-700">Tu usuario (ID):</label>
+    <input id="userIdInput" type="text" class="w-full mb-4 p-2 border rounded focus:outline-none focus:ring focus:border-blue-300" placeholder="ej. user123">
+
+    <button id="loadHistoryBtn" class="mb-4 w-full px-4 py-2 bg-purple-600 hover:bg-green-700 text-white rounded transition">Cargar historial</button>
+
+    <div id="convList" class="mb-4 space-y-2"></div>
+
+    <div id="messagesArea" class="h-48 overflow-auto border p-2 rounded bg-gray-50 space-y-2"></div>
+
+    <div class="mt-4 text-center">
+      <a href="index.html" class="text-blue-600 hover:underline">Volver al chat</a>
+    </div>
+  </div>
+
+  <script src="static/js/history.js"></script>
+</body>
+
+</html>
